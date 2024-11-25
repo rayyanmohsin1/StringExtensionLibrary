@@ -1,0 +1,11 @@
+E:\RayyanMohsin\StringExtensionLibrary\bin\Debug\net8.0\StringExtensionLibrary.deps.json
+E:\RayyanMohsin\StringExtensionLibrary\bin\Debug\net8.0\StringExtensionLibrary.dll
+E:\RayyanMohsin\StringExtensionLibrary\bin\Debug\net8.0\StringExtensionLibrary.pdb
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\StringExtensionLibrary.GeneratedMSBuildEditorConfig.editorconfig
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\StringExtensionLibrary.AssemblyInfoInputs.cache
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\StringExtensionLibrary.AssemblyInfo.cs
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\StringExtensionLibrary.csproj.CoreCompileInputs.cache
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\StringExtensionLibrary.dll
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\refint\StringExtensionLibrary.dll
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\StringExtensionLibrary.pdb
+E:\RayyanMohsin\StringExtensionLibrary\obj\Debug\net8.0\ref\StringExtensionLibrary.dll
