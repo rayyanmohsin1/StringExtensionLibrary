@@ -1,0 +1,35 @@
+trigger:
+- main
+
+pool:
+  name: 'Default'
+
+variables:
+  BUILD_CONFIGURATION: 'Release'
+  NUGET_SOURCE: 'https://pkgs.dev.azure.com/rmohsin0787/StringExtensionLibrary/_packaging/MyNuGetFeed/nuget/v3/index.json' 
+
+steps:
+# Install .NET SDK
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x'
+  displayName: 'Install .NET SDK'
+
+# Restore Dependencies
+- script: dotnet restore
+  displayName: 'Restore Dependencies'
+
+# Build the Class Library
+- script: dotnet build --configuration $(BUILD_CONFIGURATION)
+  displayName: 'Build Class Library'
+
+# Pack the Class Library into a NuGet Package
+- script: dotnet pack --configuration $(BUILD_CONFIGURATION) --output $(Build.ArtifactStagingDirectory)
+  displayName: 'Pack NuGet Package'
+
+# Push the NuGet Package to Azure Artifacts Feed
+- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/*.nupkg --source $(NUGET_SOURCE) --api-key $(System.AccessToken)
+  displayName: 'Publish to Azure Artifacts Feed'
+  env:
+    NUGET_AUTH_TOKEN: $(System.AccessToken)  # Authenticate with the system access token
