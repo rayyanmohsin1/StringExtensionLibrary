@@ -42,9 +42,3 @@ steps:
     artifact: 'MyFeed'
     publishLocation: 'pipeline'
   displayName: 'Publish Pipeline Artifact'
-
-# Push the NuGet Package to Azure Artifacts Feed
-- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/*.nupkg --source $(NUGET_SOURCE) --api-key $(System.AccessToken)
-  displayName: 'Publish to Azure Artifacts Feed'
-  env:
-    NUGET_AUTH_TOKEN: $(System.AccessToken)  # Authenticate with the system access token
