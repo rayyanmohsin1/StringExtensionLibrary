@@ -6,7 +6,7 @@ pool:
 
 variables:
   BUILD_CONFIGURATION: 'Release'
-  NUGET_SOURCE: 'https://pkgs.dev.azure.com/rmohsin0787/StringExtensionLibrary/_packaging/MyNuGetFeed/nuget/v3/index.json' 
+  NUGET_SOURCE: 'https://pkgs.dev.azure.com/rmohsin0787/StringExtensionLibrary/_packaging/MyFeed/nuget/v3/index.json' 
 
 steps:
 # Install .NET SDK
