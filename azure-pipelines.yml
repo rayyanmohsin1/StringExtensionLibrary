@@ -35,6 +35,14 @@ steps:
 - script: dir $(Build.ArtifactStagingDirectory)
   displayName: 'List Files in Artifact Staging Directory'
 
+# Publish Pipeline Artifact
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: 'MyFeed'
+    publishLocation: 'pipeline'
+  displayName: 'Publish Pipeline Artifact'
+
 # Push the NuGet Package to Azure Artifacts Feed
 - script: dotnet nuget push $(Build.ArtifactStagingDirectory)/*.nupkg --source $(NUGET_SOURCE) --api-key $(System.AccessToken)
   displayName: 'Publish to Azure Artifacts Feed'
