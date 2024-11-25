@@ -15,6 +15,12 @@ steps:
     packageType: 'sdk'
     version: '8.0.x'
   displayName: 'Install .NET SDK'
+  
+- task: DotNetCoreCLI@2
+  displayName: 'Clear NuGet cache'
+  inputs:
+    command: 'custom'
+    custom: 'nuget locals all --clear'
 
 # Restore Dependencies
 - script: dotnet restore
